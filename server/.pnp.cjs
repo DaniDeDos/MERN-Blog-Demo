@@ -28,9 +28,11 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["aws-sdk", "npm:2.1432.0"],\
           ["bcrypt", "npm:5.1.0"],\
+          ["bcryptjs", "npm:2.4.3"],\
           ["cors", "npm:2.8.5"],\
           ["dotenv", "npm:16.3.1"],\
           ["express", "npm:4.18.2"],\
+          ["express-validator", "npm:7.0.1"],\
           ["firebase-admin", "npm:11.10.1"],\
           ["jsonwebtoken", "npm:9.0.1"],\
           ["mongoose", "npm:7.3.2"],\
@@ -937,6 +939,15 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["bcryptjs", [\
+      ["npm:2.4.3", {\
+        "packageLocation": "../../../../../../../../home/hanzo/.yarn/berry/cache/bcryptjs-npm-2.4.3-32de4957eb-10c0.zip/node_modules/bcryptjs/",\
+        "packageDependencies": [\
+          ["bcryptjs", "npm:2.4.3"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["bignumber.js", [\
       ["npm:9.1.2", {\
         "packageLocation": "../../../../../../../../home/hanzo/.yarn/berry/cache/bignumber.js-npm-9.1.2-c2228c6a4a-10c0.zip/node_modules/bignumber.js/",\
@@ -1705,6 +1716,17 @@ const RAW_RUNTIME_STATE =
           ["type-is", "npm:1.6.18"],\
           ["utils-merge", "npm:1.0.1"],\
           ["vary", "npm:1.1.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["express-validator", [\
+      ["npm:7.0.1", {\
+        "packageLocation": "../../../../../../../../home/hanzo/.yarn/berry/cache/express-validator-npm-7.0.1-cd576fda4a-10c0.zip/node_modules/express-validator/",\
+        "packageDependencies": [\
+          ["express-validator", "npm:7.0.1"],\
+          ["lodash", "npm:4.17.21"],\
+          ["validator", "npm:13.11.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -3902,9 +3924,11 @@ const RAW_RUNTIME_STATE =
           ["server", "workspace:."],\
           ["aws-sdk", "npm:2.1432.0"],\
           ["bcrypt", "npm:5.1.0"],\
+          ["bcryptjs", "npm:2.4.3"],\
           ["cors", "npm:2.8.5"],\
           ["dotenv", "npm:16.3.1"],\
           ["express", "npm:4.18.2"],\
+          ["express-validator", "npm:7.0.1"],\
           ["firebase-admin", "npm:11.10.1"],\
           ["jsonwebtoken", "npm:9.0.1"],\
           ["mongoose", "npm:7.3.2"],\
@@ -4475,6 +4499,15 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../../../../../../../../home/hanzo/.yarn/berry/cache/uuid-npm-9.0.1-39a8442bc6-10c0.zip/node_modules/uuid/",\
         "packageDependencies": [\
           ["uuid", "npm:9.0.1"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["validator", [\
+      ["npm:13.11.0", {\
+        "packageLocation": "../../../../../../../../home/hanzo/.yarn/berry/cache/validator-npm-13.11.0-f0143e2784-10c0.zip/node_modules/validator/",\
+        "packageDependencies": [\
+          ["validator", "npm:13.11.0"]\
         ],\
         "linkType": "HARD"\
       }]\
