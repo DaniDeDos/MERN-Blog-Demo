@@ -12,7 +12,7 @@ const formatearDataSend = (user) => {
   });
 
   return {
-    name: user.personal_info.name,
+    username: user.personal_info.name,
     profile_img: user.personal_info.profile_img,
     username: user.personal_info.username,
     access_token: token,

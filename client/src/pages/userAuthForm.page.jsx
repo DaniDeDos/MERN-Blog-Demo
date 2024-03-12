@@ -4,7 +4,7 @@ import { RiUserLine } from "react-icons/ri";
 import { MdAlternateEmail } from "react-icons/md";
 import { BsKey } from "react-icons/bs";
 import googleIcon from "../imgs/google.png";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import AnimationWrapper from "../common/page-animation";
 import clienteAxios from "../config/axios";
 import { Toaster, toast } from "react-hot-toast";
@@ -12,6 +12,7 @@ import { storeInSession } from "../common/session";
 import { UserContext } from "../App";
 
 const UserAuthForm = ({ type }) => {
+  const navigate = useNavigate();
   const [formState, setFormState] = useState({
     name: "",
     email: "",
@@ -30,11 +31,9 @@ const UserAuthForm = ({ type }) => {
       console.log(respuesta.data);
       console.log(formData);
 
-
       if (respuesta.data) {
         storeInSession("user", JSON.stringify(respuesta.data));
         setUserAuth(respuesta.data);
-        // Aquí puedes agregar lógica para navegar al usuario después de una autenticación exitosa
       }
     } catch (error) {
       toast.error(error.response.data.msg);
@@ -57,14 +56,10 @@ const UserAuthForm = ({ type }) => {
     }));
   };
 
-
-
-  return (
-
-
+  return access_token ? (
+    navigate("/")
+  ) : (
     <AnimationWrapper keyValue={type}>
-
-
       <section className="h-cover flex items-center justify-center">
         <Toaster />
         <form
