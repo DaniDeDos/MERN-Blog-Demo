@@ -16,19 +16,6 @@ router.post(
     check("password", "El password requiere minimo 8 caracteres").isLength({
       min: 8,
     }),
-    check(
-      "password",
-      "El password requiere al menos una letra minuscula"
-    ).matches(/[a-z]/),
-    check(
-      "password",
-      "El password requiere al menos una letra mayuscula"
-    ).matches(/[A-Z]/),
-    check("password", "El password requiere al menos un numero").matches(/\d/),
-    check(
-      "password",
-      "El password requiere al menos un caracter especial"
-    ).matches(/[^a-zA-Z0-9]/),
   ],
   signup
 );

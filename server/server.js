@@ -1,5 +1,6 @@
 // server
 import express from "express";
+import cors from "cors";
 import conectarBD from "./config/conn.js";
 import authRoutes from "./routes/auth.js";
 
@@ -8,6 +9,7 @@ const server = express();
 conectarBD();
 const PORT = process.env.PORT || 4000;
 
+server.use(cors())
 server.use(express.json({ extended: true }));
 
 server.use("/api/auth", authRoutes);

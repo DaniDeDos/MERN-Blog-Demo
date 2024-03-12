@@ -1,7 +1,15 @@
 import React, { useState } from "react";
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 
-const InputBox = ({ icon: Icon, id, name, type, value, placeholder }) => {
+const InputBox = ({
+  icon: Icon,
+  id,
+  name,
+  type,
+  value,
+  placeholder,
+  onChange,
+}) => {
   const [passwordVisible, setPasswordVisible] = useState(false);
 
   return (
@@ -9,12 +17,14 @@ const InputBox = ({ icon: Icon, id, name, type, value, placeholder }) => {
       <input
         id={id}
         name={name}
+        autoComplete={`current-${name}`}
         type={
           type === "password" ? (passwordVisible ? "text" : "password") : type
         }
         defaultValue={value}
         placeholder={placeholder}
         className="input-box"
+        onChange={onChange} // Manejar el evento onChange aquí
       />
       {Icon && <Icon className="mt-0.5 input-icon" />}
 
